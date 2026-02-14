@@ -6,5 +6,5 @@ def rnn_cell(x_t: np.ndarray, h_prev: np.ndarray,
     Single RNN cell forward pass.
     """
     hh = h_prev @ W_hh
-    x = x_t @ W_xh.T
-    return np.tanh(hh + x)
+    x = x_t @ W_xh.T 
+    return np.tanh(hh + x + b_h)
